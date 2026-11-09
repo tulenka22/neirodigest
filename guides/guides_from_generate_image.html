@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="промпты для нейросетей, как писать промпты, генерация изображений, текстовые промпты, качественные изображения ИИ, ChatGPT, руководство по промптам, структура промпта, свет и атмосфера в ИИ, стиль изображений, обучение нейросетям, примеры промптов, визуальные сравнения, инструкция по ИИ, киберпанк промпты, кинематографический свет ИИ">
+  <meta name="description" content="Как писать промпты для качественных изображений в нейросетях. Пошаговое руководство с визуальными примерами: от объекта до стиля, света и структуры запроса.">
+  <title>Как писать промпты для качественных изображений</title>
+  <link rel="stylesheet" href="../css/guidess.css">
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/svg">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="../index.html">
+        <div class="logo">Нейро<span>Дайджест</span></div>
+      </a>
+      <nav>
+        <a href="../news.html">Новости</a>
+        <a href="../guides.html">Гайды</a>
+        <a href="../collections.html">Подборки</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="guide-hero"
+    style="background: url('../img/guides_pravilni_promt_dlya_generazii_img.webp') center/cover no-repeat;">
+    <div class="overlay"></div>
+    <div class="container">
+      <h1>Как писать промпты<br>для качественных изображений</h1>
+      <p class="subtitle">
+        Большое практическое руководство с визуальными примерами
+        того, как один и тот же запрос может давать
+        плохой и отличный результат.
+      </p>
+    </div>
+  </section>
+
+  <main class="guide-content">
+    <div class="container">
+
+      <!-- INTRO -->
+      <section class="block">
+        <p>
+          Большинство людей считают, что нейросети «рисуют случайно».
+          На самом деле результат почти всегда напрямую зависит от промпта.
+          Один и тот же инструмент может выдавать как посредственные,
+          так и по-настоящему впечатляющие изображения.
+        </p>
+        <p>
+          В этом гайде на примере ChatGPT мы разберём, <strong>как именно формулировать запросы</strong>,
+          чтобы нейросеть понимала вас максимально точно.
+          Каждый шаг сопровождается визуальным сравнением —
+          <em>как делать не стоит</em> и <em>как делать правильно</em>.
+        </p>
+      </section>
+
+      <!-- STEP 1 -->
+      <section class="block">
+        <h2>1. Чётко формулируйте основной объект</h2>
+
+        <p>
+          Самая частая ошибка новичков — слишком абстрактный запрос.
+          Когда вы пишете «город» или «девушка», нейросеть
+          не понимает, <strong>что именно для вас важно</strong>.
+          В результате изображение получается случайным и слабым.
+
+        </p>
+
+        <p>
+          Правильный промпт всегда начинается с
+          <strong>конкретного и понятного объекта</strong>.
+        </p>
+        <br>
+        <br>
+        <div class="prompts">
+          <div class="example bad">
+            <strong>Плохо:</strong>
+            <span>Город</span>
+          </div>
+          <div class="example good">
+            <strong>Хорошо:</strong>
+            <span>Готический город</span>
+          </div>
+        </div>
+
+        <!-- Изображения Плохо / Хорошо -->
+        <div class="compare">
+          <div class="compare-item bad">
+            <span>Плохо</span>
+            <img src="../img/bez_utochnenia.webp" alt="Размытое изображение абстрактного города без четкой стилистики и деталей">
+          </div>
+          <div class="compare-item good">
+            <span>Хорошо</span>
+            <img src="../img/s_utochneniem.webp" alt="Детализированное изображение готического города с остроконечными башнями и мрачной архитектурой">
+          </div>
+        </div>
+
+        <p class="note">
+          👉 Разница здесь не в качестве модели, а в том,
+          насколько ясно задан главный объект.
+        </p>
+      </section>
+
+
+
+      <!-- STEP 2 -->
+      <section class="block">
+        <h2>2. Всегда указывайте стиль и жанр</h2>
+
+        <p>
+          Нейросеть не знает, в каком стиле вы хотите изображение,
+          если вы ей об этом не скажете.
+          «Портрет человека» может выглядеть как фото,
+          иллюстрация, 3D или картина маслом.
+        </p>
+
+        <p>
+          Добавление стиля сразу задаёт направление
+          и резко повышает предсказуемость результата.
+        </p>
+        <br>
+        <br>
+        <div class="prompts">
+          <div class="example bad">
+            <strong>Плохо:</strong>
+            <span>Портрет человека</span>
+          </div>
+          <div class="example good">
+            <strong>Хорошо:</strong>
+            <span>Индивидуальный портрет человека в стиле гранж</span>
+          </div>
+        </div>
+        <div class="compare">
+          <div class="compare-item bad">
+            <span>Без стиля</span>
+            <img src="../img/bez_stiley.webp" alt="Портрет человека в нейтральном фотореалистичном стиле без выраженной художественной обработки">
+          </div>
+          <div class="compare-item good">
+            <span>Со стилем</span>
+            <img src="../img/so_stilem.webp" alt="Портрет человека в стиле гранж с текстурными эффектами, потертостями и мрачной эстетикой">
+          </div>
+        </div>
+
+        <p class="note">
+          👉 Стиль — это не украшение, а инструмент управления результатом.
+        </p>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="block">
+        <h2>3. Контролируйте свет и атмосферу</h2>
+
+        <p>
+          Освещение — один из самых недооценённых параметров.
+          Именно свет делает изображение «киношным»
+          или, наоборот, плоским.
+        </p>
+
+        <p>
+          Без указания света нейросеть выбирает его случайно.
+          С указанием — начинает работать как оператор.
+        </p>
+        <br>
+        <br>
+        <div class="prompts">
+          <div class="example bad">
+            <strong>Плохо:</strong>
+            <span>Человек под дождём</span>
+          </div>
+          <div class="example good">
+            <strong>Хорошо:</strong>
+            <span>Человек под дождём в кинематографическом свете</span>
+          </div>
+        </div>
+        <div class="compare">
+          <div class="compare-item bad">
+            <span>Случайный свет</span>
+            <img src="../img/bez_sveta.webp" alt="Человек под дождем с плоским рассеянным освещением без выразительности">
+          </div>
+          <div class="compare-item good">
+            <span>Контроль света</span>
+            <img src="../img/so_svetom.webp" alt="Человек под дождем с кинематографическим освещением, контровым светом и глубокими тенями">
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 4 -->
+      <section class="block">
+        <h2>4. Используйте структурированный промпт</h2>
+
+        <p>
+          Хаотичный набор слов работает хуже,
+          чем логически выстроенный запрос.
+          Структура помогает нейросети
+          правильно расставлять приоритеты.
+        </p>
+        <br>
+        <br>
+        <div class="prompts">
+          <div class="example bad">
+            <strong>Плохо:</strong>
+            <span>отражение, 8k, ночь, очень детализированный, кинематографичный свет, дождь, футуристичный киберпанк
+              город, неоновый свет</span>
+          </div>
+          <div class="example good">
+            <strong>Хорошо:</strong>
+            <span>Футуристичный киберпанк город, ночь, неоновый свет, дождь, отражение, кинематографичный свет, очень
+              детализированный, 8k</span>
+          </div>
+        </div>
+        <div class="compare">
+          <div class="compare-item bad">
+            <span>Без структуры</span>
+            <img src="../img/bez_structury.webp" alt="Киберпанк город с хаотичной композицией, где элементы плохо сбалансированы">
+          </div>
+          <div class="compare-item good">
+            <span>Со структурой</span>
+            <img src="../img/so_structury.webp" alt="Киберпанк город с продуманной композицией, четкими линиями и гармоничным распределением неоновых огней">
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL -->
+      <section class="block highlight">
+        <h2>Итог</h2>
+        <p>
+          Хороший результат — это не удача.
+          Это комбинация чёткого объекта,
+          стиля, света и структуры.
+        </p>
+        <p>
+          <strong>Объект → Стиль → Атмосфера → Детали → Качество</strong>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    © 2026 Нейро Дайджест. <br> По вопросам обращаться: maksimrastegaev742@gmail.com
+  </footer>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106539264', 'ym');
+
+    ym(106539264, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106539264" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+
+</html>

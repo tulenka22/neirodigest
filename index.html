@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords"
+        content="нейросети, искусственный интеллект, ИИ, AI, ChatGPT, нейро дайджест, новости ИИ, гайды по нейросетям, подборки нейросетей, бесплатные нейросети, промты">
+    <meta name="description"
+        content="Нейро Дайджест — новости, гайды и подборки по нейросетям. Понятно о том, как использовать ИИ в учёбе, работе и жизни.">
+    <title>Нейро Дайджест — всё о нейросетях простым языком</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/svg">
+    <style>
+        /* Index page additional styles */
+        .hero {
+            height: 70vh;
+            min-height: 400px;
+            text-align: left;
+        }
+        .hero-content h1 {
+            font-size: 42px;
+            line-height: 1.2;
+        }
+        .hero-content .subtitle {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-primary:hover { background: #2563eb; }
+        .btn-secondary {
+            display: inline-block;
+            padding: 14px 28px;
+            background: transparent;
+            color: #60a5fa;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+        .btn-secondary:hover { border-color: #60a5fa; }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            color: #94a3b8;
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+        .section-link {
+            display: inline-block;
+            margin-top: 24px;
+            color: #60a5fa;
+            font-size: 15px;
+        }
+        .section-link:hover { text-decoration: underline; }
+
+        /* Latest news */
+        .latest-news {
+            padding: 60px 0;
+            background: #0f172a;
+        }
+        .news-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-preview-card {
+            background: #111827;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #1f2937;
+        }
+        .news-preview-card:hover {
+            transform: translateY(-4px);
+            border-color: #334155;
+        }
+        .news-preview-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .news-preview-card .card-body {
+            padding: 20px;
+        }
+        .news-preview-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .news-preview-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* Guides preview */
+        .guides-preview {
+            padding: 60px 0;
+        }
+        .guides-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .guide-preview-card {
+            background: #111827;
+            padding: 28px;
+            border-radius: 14px;
+            border-left: 4px solid #60a5fa;
+            transition: transform 0.3s;
+        }
+        .guide-preview-card:hover {
+            transform: translateX(4px);
+        }
+        .guide-preview-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #e5e7eb;
+        }
+        .guide-preview-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* Quick start */
+        .quick-start {
+            padding: 60px 0;
+            background: #0f172a;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .step-card {
+            background: #111827;
+            padding: 28px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #1f2937;
+            transition: border-color 0.3s;
+        }
+        .step-card:hover { border-color: #3b82f6; }
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #1e3a5f;
+            color: #60a5fa;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        .step-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        .step-card p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* Collections preview */
+        .collections-preview {
+            padding: 60px 0;
+        }
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .collection-preview-card {
+            background: #111827;
+            padding: 28px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #1f2937;
+            transition: all 0.3s;
+        }
+        .collection-preview-card:hover {
+            border-color: #60a5fa;
+            transform: translateY(-4px);
+        }
+        .collection-preview-card .card-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        .collection-preview-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .collection-preview-card p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 { font-size: 28px; }
+            .hero { height: auto; padding: 60px 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html">
+                <div class="logo">Нейро<span>Дайджест</span></div>
+            </a>
+            <nav>
+                <a href="news.html">Новости</a>
+                <a href="guides.html">Гайды</a>
+                <a href="collections.html">Подборки</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Нейросети — понятно и по делу</h1>
+            <p class="subtitle">
+                Новости, гайды и подборки инструментов ИИ.
+                Рассказываем, как использовать нейросети в учёбе, работе и повседневной жизни.
+            </p>
+            <div class="hero-buttons">
+                <a href="guides.html" class="btn-primary">Начать с гайдов</a>
+                <a href="news.html" class="btn-secondary">Читать новости</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST NEWS -->
+    <section class="latest-news">
+        <div class="container">
+            <h2 class="section-title">Последние новости</h2>
+            <p class="section-subtitle">Что происходит в мире искусственного интеллекта</p>
+
+            <div class="news-preview-grid">
+                <a href="news/kredit_na_ii.html">
+                    <article class="news-preview-card">
+                        <img src="img/ii_kreditt.webp" alt="ИИ оформил кредит">
+                        <div class="card-body">
+                            <h3>ИИ оформил кредит и запустил собственный магазин</h3>
+                            <p>Полноценный офлайн-магазин, владельцем которого официально выступает языковая модель.</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="news/ii_otslejivaet.html">
+                    <article class="news-preview-card">
+                        <img src="img/vosmojnosti_otslejivania.webp" alt="Нейросеть для отслеживания">
+                        <div class="card-body">
+                            <h3>Создана нейросеть для отслеживания быстрых объектов</h3>
+                            <p>Методы компьютерного зрения и нейросетевых алгоритмов для многообъектного трекинга.</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="news/fitnes_ii.html">
+                    <article class="news-preview-card">
+                        <img src="img/ai_fintes_trainer.webp" alt="ИИ-тренер CoachCube">
+                        <div class="card-body">
+                            <h3>Презентован ИИ-тренер CoachCube</h3>
+                            <p>Виртуальный наставник в компактной кабине — индивидуальные тренировки без живого тренера.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <a href="news.html" class="section-link">Все новости &rarr;</a>
+        </div>
+    </section>
+
+    <!-- GUIDES PREVIEW -->
+    <section class="guides-preview">
+        <div class="container">
+            <h2 class="section-title">Гайды</h2>
+            <p class="section-subtitle">Практические руководства: от первых шагов до продвинутых техник</p>
+
+            <div class="guides-preview-grid">
+                <a href="guides/5-neirosetei-dlya-novichkov.html">
+                    <div class="guide-preview-card">
+                        <h3>5 бесплатных нейросетей для новичков</h3>
+                        <p>С чего начать, если ты впервые пробуешь ИИ. Бесплатные инструменты, которые работают на русском.</p>
+                    </div>
+                </a>
+                <a href="guides/10-promtov-dlya-chatgpt.html">
+                    <div class="guide-preview-card">
+                        <h3>10 промтов для ChatGPT, которые реально работают</h3>
+                        <p>Готовые запросы для учёбы, работы и повседневных задач. Копируй и используй.</p>
+                    </div>
+                </a>
+                <a href="guides/guides_from_generate_image.html">
+                    <div class="guide-preview-card">
+                        <h3>Генерация изображений: правильные промты</h3>
+                        <p>Как получать качественные арты и иллюстрации с помощью нейросетей.</p>
+                    </div>
+                </a>
+            </div>
+            <a href="guides.html" class="section-link">Все гайды &rarr;</a>
+        </div>
+    </section>
+
+    <!-- QUICK START -->
+    <section class="quick-start">
+        <div class="container">
+            <h2 class="section-title">С чего начать</h2>
+            <p class="section-subtitle">Три шага, чтобы разобраться в нейросетях</p>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Попробуй ChatGPT</h3>
+                    <p>Зарегистрируйся и задай любой вопрос. Это бесплатно и занимает 2 минуты.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Изучи промты</h3>
+                    <p>Правильный запрос — 80% результата. Начни с наших готовых промтов.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Примени на практике</h3>
+                    <p>Используй нейросети для учёбы, работы или творчества — результат будет сразу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLECTIONS PREVIEW -->
+    <section class="collections-preview">
+        <div class="container">
+            <h2 class="section-title">Подборки инструментов</h2>
+            <p class="section-subtitle">Лучшие бесплатные нейросети по категориям</p>
+
+            <div class="collections-grid">
+                <a href="collections/collection-imageII.html">
+                    <div class="collection-preview-card">
+                        <div class="card-icon">&#127912;</div>
+                        <h3>Генерация изображений</h3>
+                        <p>Нейросети для создания картинок, артов и иллюстраций по описанию</p>
+                    </div>
+                </a>
+                <a href="collections/collection-videoII.html">
+                    <div class="collection-preview-card">
+                        <div class="card-icon">&#127916;</div>
+                        <h3>Генерация видео</h3>
+                        <p>Инструменты для создания и редактирования видео с помощью ИИ</p>
+                    </div>
+                </a>
+                <a href="collections/collection-codeII.html">
+                    <div class="collection-preview-card">
+                        <div class="card-icon">&#128187;</div>
+                        <h3>ИИ для кода</h3>
+                        <p>Нейросети, которые помогают писать, проверять и отлаживать код</p>
+                    </div>
+                </a>
+            </div>
+            <a href="collections.html" class="section-link">Все подборки &rarr;</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        &copy; 2026 Нейро Дайджест. <br> По вопросам обращаться: maksimrastegaev742@gmail.com
+    </footer>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106539264', 'ym');
+
+    ym(106539264, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106539264" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+
+</html>
